@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TODO-TEAM-ID.com.pocketbiz.app",
+        "paths": ["/*"]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["TODO-TEAM-ID.com.pocketbiz.app"]
+  }
+}
