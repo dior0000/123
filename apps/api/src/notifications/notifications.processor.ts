@@ -90,6 +90,6 @@ export class NotificationsProcessor implements OnModuleInit, OnModuleDestroy {
     if (appt.client.telegramId) {
       await this.telegram.sendMessage(appt.client.telegramId, text);
     }
-    // TODO(phase-4): SMS fallback when no telegramId and client has phone
+    // TODO: SMS fallback — клиент без Telegram не получит напоминание. Нужен SmsProvider + лимиты.
   }
 }

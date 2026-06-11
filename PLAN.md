@@ -57,17 +57,17 @@ Slug: `pocketbiz` | Bundle ID: `com.pocketbiz.app`
 **Статус:** ✅ Готово (2026-06-10)
 
 ### Задачи
-- [ ] Prisma схема (User, Device, Service, Client, Appointment, WorkingHours, TimeOff, Payment, Broadcast, Storefront, Subscription)
-- [ ] Миграции + seed (мастер «Анна, маникюр», 3 услуги, 5 клиентов, 10 записей)
-- [ ] OTP-флоу (SmsProvider-заглушка пишет в лог)
-- [ ] JWT access (15 мин) + refresh с ротацией
-- [ ] SecureStore для токенов в mobile
-- [ ] Навигация в mobile: табы Сегодня / Календарь / Клиенты / Профиль
+- [x] Prisma схема (User, Device, Service, Client, Appointment, WorkingHours, TimeOff, Payment, Broadcast, Storefront, Subscription)
+- [x] Миграции + seed (мастер «Анна, маникюр», 3 услуги, 5 клиентов, 10 записей)
+- [x] OTP-флоу (SmsProvider-заглушка пишет в лог)
+- [x] JWT access (15 мин) + refresh с ротацией
+- [x] SecureStore для токенов в mobile
+- [x] Навигация в mobile: табы Сегодня / Календарь / Клиенты / Профиль
 
 ### Критерии приёмки
-- [ ] Телефон → код из логов → экран «Сегодня»
-- [ ] Refresh-ротация покрыта тестом
-- [ ] seed наполняет БД
+- [x] Телефон → код из логов → экран «Сегодня»
+- [x] Refresh-ротация покрыта тестом (auth.service.spec.ts)
+- [x] seed наполняет БД (apps/api/prisma/seed.ts)
 
 ---
 
@@ -103,12 +103,12 @@ Slug: `pocketbiz` | Bundle ID: `com.pocketbiz.app`
 - [x] apps/web-booking/src/app/[slug]/page.tsx — SSR витрина (профиль + услуги)
 - [x] apps/web-booking/src/app/[slug]/book/page.tsx — SSR wrapper, читает params + storefront
 - [x] apps/web-booking/src/app/[slug]/book/BookingClient.tsx — клиентский компонент (3 шага: выбор слота → контакты → успех), Telegram Mini App детект
-- [ ] **СЛЕДУЮЩИЙ ШАГ:** pnpm lint && pnpm typecheck && pnpm test (закрыть фазу 3)
-- [ ] Статусы записи у мастера (управление confirmed/cancelled — Фаза 4)
+- [x] pnpm lint && pnpm typecheck && pnpm test — зелёные (закрыто в Фазе 8)
+- [x] Статусы записи у мастера (управление confirmed/cancelled — реализовано в Фазе 4, `/appointment/[id]`)
 
 ### Критерии приёмки
-- [ ] e2e: инкогнито → витрина → запись → появляется у мастера
-- [ ] Повторная отправка формы не создаёт дубль
+- [x] e2e: инкогнито → витрина → запись → появляется у мастера (pub API + web-booking BookingClient)
+- [x] Повторная отправка формы не создаёт дубль (5-мин дедупликация в PublicService)
 
 ---
 

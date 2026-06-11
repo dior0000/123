@@ -21,7 +21,6 @@ export interface StorefrontInfo {
 export interface Service {
   id: string;
   name: string;
-  description: string | null;
   durationMin: number;
   priceKopecks: number;
   bufferMin: number;

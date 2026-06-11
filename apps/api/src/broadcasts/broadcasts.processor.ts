@@ -56,7 +56,7 @@ export class BroadcastsProcessor implements OnModuleInit, OnModuleDestroy {
       if (client.telegramId) {
         await this.telegram.sendMessage(client.telegramId, broadcast.text + unsubscribeNote);
       }
-      // TODO(phase-6): SMS fallback when no telegramId
+      // TODO: SMS fallback — клиент без Telegram не получит рассылку. Нужен SmsProvider + лимиты.
     }
 
     await this.prisma.broadcast.update({

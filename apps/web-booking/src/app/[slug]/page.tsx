@@ -55,9 +55,6 @@ export default async function StorefrontPage({
           >
             <div style={{ flex: 1 }}>
               <div style={{ fontWeight: 600 }}>{svc.name}</div>
-              {svc.description && (
-                <div style={{ fontSize: '0.875rem', color: '#666', marginTop: '0.125rem' }}>{svc.description}</div>
-              )}
               <div style={{ fontSize: '0.8125rem', color: '#888', marginTop: '0.25rem' }}>{svc.durationMin} мин</div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem', flexShrink: 0 }}>
